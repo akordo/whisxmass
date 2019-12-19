@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>WhisXmass Countdown</title>
+</head>
+<body>
+    <!-- Begin page content -->
+        <div id='countdown' class='center'></div>
+</body>
+</html>
+
+<link href='vendors/counter/timeTo.css' rel='stylesheet' />
+<script src='vendors/jquery/jquery-3.1.1.min.js'></script>   
+<script src='vendors/counter/jquery.time-to.min.js'></script>
+
+
+<script>
+    $('#countdown').timeTo({
+        timeTo: new Date(new Date('Fri Dec 20 2019 17:00:00 GMT+0100 (Central European Standard Time)')),
+        displayDays: 2,
+        theme: "black",
+        displayCaptions: true,
+        fontSize: 64,
+        captionSize: 32
+    });
+</script>
+
+<style>
+    .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); /* for IE 9 */
+        -webkit-transform: translate(-50%, -50%); /* for Safari */
+    }
+
+    .timeTo figcaption {
+        visibility: hidden;
+    }
+
+    body {
+        background-image: url("resources/img/whisky_bg.jpg"); 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+   
+</style>
